@@ -1,0 +1,251 @@
+/* CSS Document */
+* {margin:0;padding:0}
+p {margin-bottom:1em}
+ul{margin-left:20px;margin-bottom:1em}
+/* commented backslash hack v2 \*/ 
+html, body{height:100%;} 
+/* end hack */ 
+
+body {
+	background:#D2DA9C url(leftcolbg.jpg) repeat-y left top;
+	color: #FFF;
+}
+#outer{
+	margin-left:130px;
+	margin-right:130px;
+	background: #FFF;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	margin-bottom:-52px;
+	min-height:100%
+}
+#header{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:70px;
+	background: #809900;
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	overflow:hidden;
+	z-index:999;
+}
+#left {
+	position:relative;/*ie needs this to show float */
+	width:130px;
+	float:left;
+	margin-left:-129px;/*must be 1px less than width otherwise won't push footer down */
+	z-index:100;
+	left:-1px;
+}
+#left p, 
+#right p {padding:3px}
+#right {
+	position:relative;/*ie needs this to show float */
+	width:130px;
+	float:right;
+	margin-right:-129px;/*must be 1px less than width otherwise won't push footer down */
+	left:1px;
+	color: #000;
+}
+#footer {
+	width:100%;
+	clear:both;
+	height:50px;
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	background-color: #406700;
+	text-align:center;
+	position:relative;
+}
+#clearheader{height:72px;}/*needed to make room for header*/
+#clearfooter{clear:both;height:52px;}/*needed to make room for footer*/
+* > html #clearfooter {float:left;width:100%;}/* ie mac styles */
+#centrecontent {
+	width:100%;
+	float:left;
+	position:relative;
+	z-index:1;
+	margin:0 -1px;/* old moz fix*/
+	color: #000;
+}
+/* css stuff below is just for presentation and not needed for the demo */
+#centrecontent p { padding: 0 20px; }
+h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 150%; padding: 20px;}
+#left span {
+	display:none;	
+}	
+#left a:hover {
+	text-decoration: none;
+	text-decoration: none;
+	color:#222;
+	background: #FFF;
+}
+#left a:hover span {
+	display:block;
+	position:absolute;
+	left:130px;
+	width:150px;
+	z-index:20;
+	background:#fff;
+}
+@media all and (min-width: 0px){
+  #left a:hover span {
+	top:150px;
+  }
+}
+#footer a, #left a { color:#FFF; }
+#footer span {
+	display:none;	
+}	
+#footer a:hover {
+	text-decoration: none;
+	color:#222;
+	background: #FFF;
+}
+#footer a:hover span {
+	display:block;
+	position:absolute;
+	top:-95px;
+	width:150px;
+	z-index:20;
+	background:#fff;
+	left:50%;
+}
+html>body #minHeight{float:right;width:0px;height:100%;margin-bottom:-52px;} /*safari wrapper */
+
+
+
+
+div.bottombar{ /* bar that runs across the bottom of the menu */
+height: 10px;
+background: #1a1109;
+}
+
+ul.semiopaquemenu{ /* main menu UL */
+font: bold 14px Georgia ;
+width: 100%;
+background: #b1e958;
+padding: 11px 0 8px 0; /* padding of the 4 sides of the menu */
+margin: 0;
+text-align: left; /* set value to "left", "center", or "right" to align menu accordingly */
+}
+
+ul.semiopaquemenu li{
+display: inline;
+}
+
+ul.semiopaquemenu li a{
+color:black;
+padding: 6px 8px 6px 8px; /* padding of the 4 sides of each menu link */
+margin-right: 15px; /* spacing between each menu link */
+text-decoration: none;
+}
+
+ul.semiopaquemenu li a:hover, ul.semiopaquemenu li a.selected{
+color: black;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjgyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); /* IE9+ SVG equivalent  of linear gradients */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.16) 100%); /* fade from white (0.82 opacty) to 0.16 opacity */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.82)), color-stop(100%,rgba(255,255,255,0.16)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.16) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.16) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.16) 100%);
+background: linear-gradient(top,  rgba(255,255,255,0.82) 0%,rgba(255,255,255,0.16) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1ffffff', endColorstr='#29ffffff',GradientType=0 );
+-moz-box-shadow: 0 0 5px #595959; /* CSS3 box shadows */
+-webkit-box-shadow: 0 0 5px #595959;
+box-shadow: 0 0 5px #595959;
+padding-top: 12px; /* large padding to get menu item to protrude upwards */
+padding-bottom: 20px; /* large padding to get menu item to protrude downwards */
+}
+
+/************************Underline arrow
+
+
+
+ul.arrowunderline{
+list-style-type:none;
+margin:0;
+padding:0;
+text-align:center; /* enter "left", "right", or "center" to orient the menu accordingly */
+font: bold 16px Georgia;
+}
+
+ul.arrowunderline li{
+display:inline;
+margin-right:25px; /* spacing between each menu item */
+}
+
+ul.arrowunderline li a{
+position:relative;
+color:black;
+padding-bottom:8px; /*spacing between each menu item and arrow underline beneath it */
+text-decoration:none;
+
+}
+
+ul.arrowunderline li a:hover{
+border-bottom:3px solid purple; /* style of arrow underline */
+}
+
+ul.arrowunderline li a:hover:after{ /* use CSS generated content to add arrow to the menu */
+content:'';
+width:0;
+height:0;
+position:absolute;
+left:50%;
+margin-left:-5px; /* value should match border-width below */
+bottom: 0;
+border-width:5px; /* value should match margin-left above */
+border-style:solid;
+border-color: transparent transparent purple transparent; /* create up arrow */
+}
+
+
+
+.feedbackform{
+padding: 5px;
+}
+
+div.field{ /*field row DIV (includes two columns- Styled label column and 'thefield' column)*/
+width: 550px; /*width of form rows*/
+overflow: hidden;
+padding: 5px 0;
+}
+
+div.field label.styled{ /* label elements that should be styled (left column within fieldwrapper DIV) */
+float: left;
+width: 150px; /*width of label (left column)*/
+text-transform: uppercase;
+border-bottom: 1px solid red;
+margin-right: 15px; /*spacing with right column*/
+}
+
+div.field div.thefield{ /* DIV that wraps around the actual form fields (right column within fieldwrapper DIV) */
+float: left;
+margin-bottom: 10px; /* space following the field */
+}
+
+div.field div.thefield input[type="text"]{ /* style for INPUT type="text" fields. Has no effect in IE7 or below! */
+width: 250px;
+}
+
+div.field div.thefield textarea{ /* style for TEXTAREA fields. */
+width: 300px;
+height: 150px;
+}
+
+div.buttonsdiv{ /*div that wraps around the submit/reset buttons*/
+margin-top: 5px; /*space above buttonsdiv*/
+}
+
+div.buttonsdiv input{ /* style for INPUT fields within 'buttonsdiv'. Assumed to be form buttons. */
+width: 80px;
+background: #e1dfe0;
+}
+
+
+
+
+
